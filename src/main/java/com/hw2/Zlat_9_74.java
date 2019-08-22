@@ -1,11 +1,12 @@
 package com.hw2;
 
+//Дан текст. Верно ли, что в нем есть пять идущих подряд одинаковых символов?
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Дано слово s1. Получить слово s2, образованное нечетными буквами слова s1.
-public class Zlat_9_43 {
+public class Zlat_9_74 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
@@ -22,13 +23,21 @@ public class Zlat_9_43 {
     static void doSomething(BufferedReader reader) {
         try {
             String name = reader.readLine();
-            StringBuilder result = new StringBuilder();
-            for (int i = 0; i < name.length(); i++) {
-                if (i % 2 != 0) {
-                    result.append(name.charAt(i));
+            int countA = 1;
+            String result = "не верно";
+            for (int i = 0; i < name.length() - 1; i++) {
+                if (name.charAt(i) == name.charAt(i + 1)) {
+                    ++countA;
+                    if (countA == 5) {
+                        result = "верно";
+                        break;
+                    }
+                } else {
+                    countA = 1;
                 }
             }
             System.out.println(result);
+            System.out.println(countA);
         } catch (IOException e) {
             e.printStackTrace();
         }

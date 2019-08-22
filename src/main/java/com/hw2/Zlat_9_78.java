@@ -1,11 +1,11 @@
 package com.hw2;
+//Дано слово. Проверить, является ли оно "перевертышем" (перевертышем на-зывается слово, читаемое одинаково как с начала, так и с конца).
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Дано слово s1. Получить слово s2, образованное нечетными буквами слова s1.
-public class Zlat_9_43 {
+public class Zlat_9_78 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
@@ -22,10 +22,10 @@ public class Zlat_9_43 {
     static void doSomething(BufferedReader reader) {
         try {
             String name = reader.readLine();
-            StringBuilder result = new StringBuilder();
-            for (int i = 0; i < name.length(); i++) {
-                if (i % 2 != 0) {
-                    result.append(name.charAt(i));
+            String result = "верно";
+            for (int i = 0; i < name.length() / 2 - 1; i++) {
+                if (name.charAt(i) != name.charAt(name.length() - i - 1)) {
+                    result = "не верно";
                 }
             }
             System.out.println(result);
@@ -34,3 +34,4 @@ public class Zlat_9_43 {
         }
     }
 }
+

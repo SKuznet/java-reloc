@@ -1,11 +1,12 @@
 package com.hw2;
 
+//Дано предложение. Определить долю (в %) букв а в нем
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Дано слово s1. Получить слово s2, образованное нечетными буквами слова s1.
-public class Zlat_9_43 {
+public class Zlat_9_62 {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
@@ -22,13 +23,13 @@ public class Zlat_9_43 {
     static void doSomething(BufferedReader reader) {
         try {
             String name = reader.readLine();
-            StringBuilder result = new StringBuilder();
+            int countA = 0;
             for (int i = 0; i < name.length(); i++) {
-                if (i % 2 != 0) {
-                    result.append(name.charAt(i));
+                if (name.charAt(i) == 'а') {
+                    countA++;
                 }
             }
-            System.out.println(result);
+            System.out.println(countA *100/ name.length());
         } catch (IOException e) {
             e.printStackTrace();
         }
