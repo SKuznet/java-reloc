@@ -10,3 +10,23 @@ OCA - 101p. - 119p.
 OCP - 124p - 132p
 
 ## hw5 - OCP 132-134 p
+
+## hw6 - OCA 234p - 278p
+
+```java
+public class Cat extends Animal implements AniI, CatI {
+    private String name;
+
+    public Cat(String name) {
+        this.name = name;
+        super.name = name;
+    }
+
+    public static void main(String[] args) {
+        Animal cat = new Cat("bars");
+        Cat cat2 = new Cat("bars");
+        System.out.println(cat.name);
+        System.out.println(cat2.name);
+    }
+}
+```
