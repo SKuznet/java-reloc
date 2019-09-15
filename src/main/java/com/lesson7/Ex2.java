@@ -9,7 +9,6 @@ public class Ex2 {
         System.out.println(ex2.f);
         System.out.println(ex2.count);
         System.out.println(Ex2.count);
-        Math
 
         Ex2.count = 5;
         System.out.println(ex2.count);
